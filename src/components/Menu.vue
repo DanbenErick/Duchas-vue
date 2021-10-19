@@ -1,14 +1,14 @@
 <template>
   <div class="ui pointing menu">
-    <a class="active item">
+    <router-link class="item" to="/" active-class="active">
       Home
-    </a>
-    <a class="item">
+    </router-link>
+    <router-link class="item" to="/cabinas" active-class="active">
       Cabinas
-    </a>
-    <a class="item">
+    </router-link>
+    <router-link class="item" to="clientes-atendidos" active-class="active">
       Clientes Atendidos
-    </a>
+    </router-link>
     
   </div>
   

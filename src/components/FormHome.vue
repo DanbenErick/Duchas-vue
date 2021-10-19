@@ -6,44 +6,44 @@
     </div>
     <div class="field">
       <label>Cabina</label>
-      <select name="" id="">
-        <option value="">Cabina: 1</option>
-        <option value="">Cabina: 1</option>
-        <option value="">Cabina: 1</option>
-        <option value="">Cabina: 1</option>
-        <option value="">Cabina: 1</option>
+      <select v-model="cliente.cabina">
+        <option v-for="(cabina, index) in cabinas" :key="index" :value="cabina.id">Cabina - {{ cabina.id }}</option>
       </select>
     </div>
     <div class="field">
       <label>Hora de Entrada</label>
-      <input type="time" name="last-name" v-model="cliente.hora_entrada_cliente">
+      <input type="time" v-model="cliente.hora_entrada_cliente">
     </div>
     <div class="field">
       <label>Tiempo Contratado</label>
-      <input type="number" name="last-name" v-model="cliente.tiempo_contratado">
+      <input type="number" v-model="cliente.tiempo_contratado">
     </div>
     <div class="field">
       <label>Precio</label>
-      <input type="number" name="last-name" v-model="cliente.precio_cliente">
+      <input type="number" v-model="cliente.precio_cliente">
     </div>
     <button class="ui button blue fluid" type="submit" @click="resetear_valores">Guardar</button>
     <div class="ui red inverted segment" v-show="show_datos_rellenados">No rellenaste todos los datos requeridos</div>
   </div>
 </template>
 <script>
-import { mapMutations } from 'vuex'
+import { mapMutations, mapState } from 'vuex'
 export default {
-  name: 'Form',
+  name: 'FormHome',
   data() {
     return {
       cliente: {
         nombre_cliente: '',
+        cabina: '',
         hora_entrada_cliente: '',
         tiempo_contratado: '',
         precio_cliente: '',
       },
       show_datos_rellenados: false,
     }
+  },
+  computed: {
+    ...mapState(['cabinas'])
   },
   methods: {
     resetear_valores() {
