@@ -9,13 +9,13 @@
   </div>
 </template>
 <script>
-import FormHome from '../components/FormHome.vue'
-import TableHome from '../components/TableHome.vue'
+import FormHome from "../components/FormHome.vue";
+import TableHome from "../components/TableHome.vue";
 export default {
-  name: 'Home',
+  name: "Home",
   components: {
     FormHome,
-    TableHome
-  }
-}
+    TableHome,
+  },
+};
 </script>

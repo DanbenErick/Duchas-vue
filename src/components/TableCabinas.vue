@@ -11,23 +11,28 @@
     </thead>
     <tbody>
       <tr v-for="(cabina, index) of cabinas" :key="index">
-        <td class="center aligned collapsing"> Cabina: {{ cabina.id }}</td>
+        <td class="center aligned collapsing">Cabina: {{ cabina.id }}</td>
         <td class="center aligned collapsing">
-          <button class="ui button red compact mini" @click="eliminar_cabina({ id: cabina.id })"><i class="icon delete"></i></button>
+          <button
+            class="ui button red compact mini"
+            @click="eliminar_cabina({ id: cabina.id })"
+          >
+            <i class="icon delete"></i>
+          </button>
         </td>
       </tr>
     </tbody>
   </table>
 </template>
 <script>
-import { mapState, mapMutations } from 'vuex'
+import { mapState, mapMutations } from "vuex";
 export default {
-  name: 'TableCabinas',
+  name: "TableCabinas",
   computed: {
-    ...mapState(['cabinas'])
+    ...mapState(["cabinas"]),
   },
   methods: {
-    ...mapMutations(['eliminar_cabina'])
-  }
-}
+    ...mapMutations(["eliminar_cabina"]),
+  },
+};
 </script>

@@ -1,6 +1,5 @@
 <template>
   <div class="ui container segment">
-    
     <table class="ui pointing table">
       <thead>
         <tr>
@@ -16,22 +15,28 @@
       </thead>
       <tbody>
         <tr v-for="(cliente, index) of clientesAtendidos" :key="index">
-          <td class="left aligned collapsing"> {{ cliente.nombre_cliente }}</td>
-          <td class="left aligned collapsing">{{ cliente.hora_entrada_cliente }}</td>
-          <td class="left aligned collapsing">{{ cliente.hora_entrada_cliente }}:min</td>
+          <td class="left aligned collapsing">{{ cliente.nombre_cliente }}</td>
+          <td class="left aligned collapsing">
+            {{ cliente.hora_entrada_cliente }}
+          </td>
+          <td class="left aligned collapsing">
+            {{ cliente.hora_entrada_cliente }}:min
+          </td>
           <td class="left aligned collapsing">{{ cliente.cabina }}</td>
-          <td class="left aligned collapsing">S/. {{ cliente.precio_cliente }}.00</td>
+          <td class="left aligned collapsing">
+            S/. {{ cliente.precio_cliente }}.00
+          </td>
         </tr>
       </tbody>
     </table>
   </div>
 </template>
 <script>
-import { mapGetters } from 'vuex'
+import { mapGetters } from "vuex";
 export default {
-  name: 'TableClientesAtendidos',
+  name: "TableClientesAtendidos",
   computed: {
-    ...mapGetters(['clientesAtendidos'])
-  }
-}
+    ...mapGetters(["clientesAtendidos"]),
+  },
+};
 </script>

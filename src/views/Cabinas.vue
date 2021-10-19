@@ -9,13 +9,13 @@
   </div>
 </template>
 <script>
-import FormCabinas from '../components/FormCabinas.vue' 
-import TableCabinas from '../components/TableCabinas.vue'
+import FormCabinas from "../components/FormCabinas.vue";
+import TableCabinas from "../components/TableCabinas.vue";
 export default {
-  name: 'Cabinas',
+  name: "Cabinas",
   components: {
     FormCabinas,
-    TableCabinas
-  }
-}
+    TableCabinas,
+  },
+};
 </script>

@@ -4,11 +4,11 @@
   </div>
 </template>
 <script>
-import TableClientesAtendidos from '../components/TableClientesAtendidos.vue'
+import TableClientesAtendidos from "../components/TableClientesAtendidos.vue";
 export default {
-  name: 'ClientesAtendidos',
+  name: "ClientesAtendidos",
   components: {
-    TableClientesAtendidos
-  }
-}
+    TableClientesAtendidos,
+  },
+};
 </script>
