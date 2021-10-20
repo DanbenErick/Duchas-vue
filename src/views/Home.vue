@@ -1,5 +1,5 @@
 <template>
-  <div class="ui container two column grid segment">
+  <div class="ui container three column grid segment">
     <div class="column">
       <FormHome />
     </div>

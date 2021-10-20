@@ -2,7 +2,7 @@
   <div class="ui form">
     <div class="field">
       <label>Numero de Cabina</label>
-      <input type="number" v-model="cabina" />
+      <input type="number" v-model="cabina" @keyup.enter="guardar_cabina"/>
     </div>
     <button class="ui button blue fluid" @click="guardar_cabina">
       Guardar

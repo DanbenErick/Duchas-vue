@@ -25,6 +25,9 @@
         <td class="center aligned collapsing">
           {{ cliente.hora_entrada_cliente }}
         </td>
+        <td class="center alined collapsing">
+          {{ cliente.hora_salida_cliente }}
+        </td>
         <td class="center aligned collapsing">
           {{ cliente.tiempo_contratado }}:min
         </td>

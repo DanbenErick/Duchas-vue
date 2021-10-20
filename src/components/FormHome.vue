@@ -38,6 +38,9 @@
     <div class="ui red inverted segment" v-show="show_datos_rellenados">
       No rellenaste todos los datos requeridos
     </div>
+    <div class="ui red inverted segment" v-show="show_cabina_ocupada">
+      La cabina esta ocupada
+    </div>
   </div>
 </template>
 <script>
@@ -57,7 +60,7 @@ export default {
     };
   },
   computed: {
-    ...mapState(["cabinas"]),
+    ...mapState(["cabinas", 'show_cabina_ocupada']),
   },
   methods: {
     resetear_valores() {

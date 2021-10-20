@@ -20,7 +20,7 @@
             {{ cliente.hora_entrada_cliente }}
           </td>
           <td class="left aligned collapsing">
-            {{ cliente.hora_entrada_cliente }}:min
+            {{ cliente.hora_salida_cliente }}:min
           </td>
           <td class="left aligned collapsing">{{ cliente.cabina }}</td>
           <td class="left aligned collapsing">
